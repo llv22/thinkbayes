@@ -161,7 +161,7 @@ class _DictWrapper(object):
         elif isinstance(obj, pandas.Series):
             self.d.update(obj.value_counts().iteritems())
         else:
-            # finally, treat it like a list
+            # finally, treat it like a list. For counter of character in obj.
             self.d.update(Counter(obj))
 
         if len(self) > 0 and isinstance(self, Pmf):
