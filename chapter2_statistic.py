@@ -9,10 +9,11 @@ class Monty(Suite):
 
     def Likelihood(self, data, hypo):
         """
-        using data likelihood to sample from hypothesis, refer to book description in page 7-8 of "think bayes"
+        Using data likelihood to sample from hypothesis
+        Refer to book description in page 7-8 of "think bayes"
         """
         if hypo == data:    
-            # if open door 'data' == 'hypo', is's impossible to keep "open door `data`, and car isn't behind door `data`" as True => must False
+            # if open door 'data' == 'hypo', it's impossible to keep "open door `data`, and car isn't behind door `data`" as True => must False
             return 0
         elif hypo == 'A':
             # if car is actually behind door 'A', then "open door `data`, and car isn't behind door `data`" will be 1/2 True
