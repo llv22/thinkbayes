@@ -1392,8 +1392,14 @@ class UnimplementedMethodException(Exception):
     """Exception if someone calls a method that should be overridden."""
 
 
-class Suite(Pmf):
-    """Represents a suite of hypotheses and their probabilities."""
+from abc import ABCMeta, abstractmethod
+class Suite(Pmf, metaclass=ABCMeta):
+    """
+    Represents a suite of hypotheses and their probabilities.
+    Python abstract class, refer to 
+    1. https://stackoverflow.com/questions/372042/difference-between-abstract-class-and-interface-in-python
+    2. https://docs.python.org/3.6/library/abc.html
+    """
 
     def Update(self, data):
         """Updates each hypothesis based on the data.
@@ -1454,6 +1460,7 @@ class Suite(Pmf):
         for data in dataset:
             self.LogUpdate(data)
 
+    @abstractmethod
     def Likelihood(self, data, hypo):
         """Computes the likelihood of the data under the hypothesis.
 
@@ -1468,7 +1475,7 @@ class Suite(Pmf):
         hypo: some representation of the hypothesis
         data: some representation of the data
         """
-        raise UnimplementedMethodException()
+        return np.log(self.Likelihood(data, hypo))
 
     def Print(self):
         """Prints the hypotheses and their probabilities."""
