@@ -61,9 +61,11 @@ class M_and_M(Suite):
         return like
 
 if __name__ == '__main__':
-    # suite = Monty('ABC')
-    # suite.Update('B')
-    # suite.Print()
+    # Monty hall
+    suite = Monty('ABC')
+    suite.Update('B')
+    suite.Print()
+    # M & M
     suite = M_and_M('AB')
     suite.Update(('bag1', 'yellow'))
     suite.Update(('bag2', 'green'))
