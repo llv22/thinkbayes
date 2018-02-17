@@ -64,10 +64,12 @@ if __name__ == '__main__':
     # Monty hall
     suite = Monty('ABC')
     suite.Update('B')
+    print("Monty Hall puzzle")
     suite.Print()
     # M & M
     suite = M_and_M('AB')
     suite.Update(('bag1', 'yellow'))
     suite.Update(('bag2', 'green'))
+    print("M & M puzzle")
     suite.Print()
     
