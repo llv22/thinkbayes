@@ -102,3 +102,7 @@ ENV/
 
 # vscode cache
 .vscode/
+
+# program output
+*.pdf
+*.eps
