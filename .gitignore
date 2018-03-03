@@ -106,3 +106,4 @@ ENV/
 # program output
 *.pdf
 *.eps
+*.png
