@@ -5,8 +5,11 @@ by Allen B. Downey, available from greenteapress.com
 Copyright 2013 Allen B. Downey
 License: GNU GPLv3 http://www.gnu.org/licenses/gpl.html
  
-Orignal link - 
+1, Original link - 
 refer to https://github.com/AllenDowney/ThinkBayes/blob/master/code/redline_data.py
+2, As http://developer.mbta.com/lib/rthr/red.csv and http://developer.mbta.com/lib/rthr/red.json become invalid any more, I have to rewrite the logic.
+https://api-v3.mbta.com/docs/swagger/index.html and https://www.mbta.com/developers/v3-api provide REST interface for querying the real schedule.
+
 """
 
 import csv
