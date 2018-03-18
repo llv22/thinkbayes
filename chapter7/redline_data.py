@@ -117,10 +117,10 @@ def main():
     # print(FLAGS.outputfile, FLAGS.startdate, FLAGS.enddate, FLAGS.mintime, FLAGS.maxtime)
     dates_range = [FLAGS.startdate + timedelta(days=x) for x in range(0, (FLAGS.enddate - FLAGS.startdate).days)]
     total_schedules = []
-    for date in dates_range:
-        schedules = getScheduleLine(token, stop_Id, date, FLAGS.mintime, FLAGS.maxtime)
+    for date_ in dates_range:
+        schedules = getScheduleLine(token, stop_Id, date_, FLAGS.mintime, FLAGS.maxtime)
         total_schedules.extend(schedules)
-    df = pd.DataFrame(total_schedules, COLUMNS)
+    df = pd.DataFrame(total_schedules, columns=COLUMNS)
     df.to_csv(FLAGS.outputfile, compression='gzip')
 
 if __name__ == '__main__':
