@@ -121,7 +121,7 @@ def main():
         schedules = getScheduleLine(token, stop_Id, date_, FLAGS.mintime, FLAGS.maxtime)
         total_schedules.extend(schedules)
     df = pd.DataFrame(total_schedules, columns=COLUMNS)
-    df.to_csv(FLAGS.outputfile, compression='gzip')
+    df.to_csv(FLAGS.outputfile, compression='gzip', index=False)
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description="Script to read schedule data of Subline RED")
