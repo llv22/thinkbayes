@@ -963,7 +963,7 @@ def MakeMixture(metapmf, label='mix'):
     return mix
 
 
-def MakeUniformPmf(low, high, n=1000):
+def MakeUniformPmf(low, high, n=101):
     """Make a uniform Pmf.
 
     low: lowest value (inclusive)
