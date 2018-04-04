@@ -107,3 +107,6 @@ ENV/
 *.pdf
 *.eps
 *.png
+
+# avoid local data
+CDBRFS08.ASC.gz
