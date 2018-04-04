@@ -110,3 +110,7 @@ ENV/
 
 # avoid local data
 CDBRFS08.ASC.gz
+
+# idea
+.idea/
+*.iml
